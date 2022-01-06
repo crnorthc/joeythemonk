@@ -77,10 +77,10 @@ export default function Sidebar(props) {
 								<a className={"font-bold hover:text-rust pb-4 "  + `${router.pathname == '/musicvideos' ? 'text-rust' : 'text-white'}`}>MUSIC VIDEO</a>
 							</Link>							
                             <Link href="/commercial">
-								<a href="/commercial" className={"font-bold hover:text-rust pb-4 "  + `${router.pathname == '/commercial' ? 'text-rust' : 'text-white'}`}>COMMERCIAL</a>
+								<a className={"font-bold hover:text-rust pb-4 "  + `${router.pathname == '/commercial' ? 'text-rust' : 'text-white'}`}>COMMERCIAL</a>
 							</Link>							
                             <Link href="/about">
-								<a href='/about' className={"font-bold hover:text-rust " + `${router.pathname == '/about' ? 'text-rust' : 'text-white'}`}>ABOUT</a>
+								<a className={"font-bold hover:text-rust " + `${router.pathname == '/about' ? 'text-rust' : 'text-white'}`}>ABOUT</a>
 							</Link>							
                         </div>							
                     </div>
