@@ -1,7 +1,7 @@
 import { CopyToClipboard } from "react-copy-to-clipboard"
 import { useState } from "react"
 import { useRouter } from "next/router"
-import a from "next/link"
+import Link from "next/link"
 
 export default function Sidebar(props) {
     const [sideAction, setSideAction] = useState('hidden')
@@ -35,18 +35,26 @@ export default function Sidebar(props) {
 					<img className='w-8 mt-4 mr-4' src='./sidebar.svg'/>
 				</button>
 				<div className="flex flex-col items-end mt-12 w-3/4">
-					<a href="/" className={"w-full hover:text-rust border-b border-rust pb-2 mb-2 text-right " + `${router.pathname == '/' ? 'text-rust font-bold' : 'text-white'}`}>
-						Home
-					</a>
-					<a href="/musicvideos" className={"w-full hover:text-rust border-b border-rust pb-2 mb-2 text-right " + `${router.pathname == '/musicvideos' ? 'text-rust font-bold' : 'text-white'}`}>
-						Music Videos
-					</a>
-					<a href="/commercial" className={"w-full hover:text-rust border-b border-rust pb-2 mb-2 text-right " + `${router.pathname == '/commercial' ? 'text-rust font-bold' : 'text-white'}`}>
-						Commercial
-					</a>
-					<a href="/about" className={"w-full hover:text-rust text-right "  + `${router.pathname == '/about' ? 'text-rust font-bold' : 'text-white'}`}>
-						About
-					</a>
+					<Link href="/">
+						<a className={"w-full hover:text-rust border-b border-rust pb-2 mb-2 text-right " + `${router.pathname == '/' ? 'text-rust font-bold' : 'text-white'}`}>
+							Home
+						</a>
+					</Link>					
+					<Link href="/musicvideos">
+						<a className={"w-full hover:text-rust border-b border-rust pb-2 mb-2 text-right " + `${router.pathname == '/musicvideos' ? 'text-rust font-bold' : 'text-white'}`}>
+							Music Videos
+						</a>
+					</Link>					
+					<Link href="/commercial">
+						<a className={"w-full hover:text-rust border-b border-rust pb-2 mb-2 text-right " + `${router.pathname == '/commercial' ? 'text-rust font-bold' : 'text-white'}`}>
+							Commercial
+						</a>
+					</Link>					
+					<Link href="/about">
+						<a className={"w-full hover:text-rust text-right "  + `${router.pathname == '/about' ? 'text-rust font-bold' : 'text-white'}`}>
+							About
+						</a>
+					</Link>					
 				</div>
 			</div>			
 		</div>
@@ -62,18 +70,26 @@ export default function Sidebar(props) {
                     <img className="w-52" src="./JTM_logo.svg"/>
                     <div className="flex border-l-2 border-gray-400 pl-1 flex-col items-start mt-12 text-white text-xs">
                         <div className="flex border-l border-gray-400 pl-4 flex-col items-start text-white text-xs">
-                            <a href="/" className={"font-bold hover:text-rust pb-4 " + `${router.pathname == '/' ? 'text-rust' : 'text-white'}`}>HOME</a>
-                            <a href="/musicvideos" className={"font-bold hover:text-rust pb-4 "  + `${router.pathname == '/musicvideos' ? 'text-rust' : 'text-white'}`}>MUSIC VIDEO</a>
-                            <a href="/commercial" className={"font-bold hover:text-rust pb-4 "  + `${router.pathname == '/commercial' ? 'text-rust' : 'text-white'}`}>COMMERCIAL</a>
-                            <a href='/about' className={"font-bold hover:text-rust " + `${router.pathname == '/about' ? 'text-rust' : 'text-white'}`}>ABOUT</a>
+							<Link href="/">
+								<a className={"font-bold hover:text-rust pb-4 " + `${router.pathname == '/' ? 'text-rust' : 'text-white'}`}>HOME</a>
+							</Link>							
+                            <Link href="/musicvideos">
+								<a className={"font-bold hover:text-rust pb-4 "  + `${router.pathname == '/musicvideos' ? 'text-rust' : 'text-white'}`}>MUSIC VIDEO</a>
+							</Link>							
+                            <Link href="/commercial">
+								<a href="/commercial" className={"font-bold hover:text-rust pb-4 "  + `${router.pathname == '/commercial' ? 'text-rust' : 'text-white'}`}>COMMERCIAL</a>
+							</Link>							
+                            <Link href="/about">
+								<a href='/about' className={"font-bold hover:text-rust " + `${router.pathname == '/about' ? 'text-rust' : 'text-white'}`}>ABOUT</a>
+							</Link>							
                         </div>							
                     </div>
                 </div>	
                 <div className="flex flex-col mt-20">							
                     <div className="flex flex-row mb-2">
-                        <a target="_blank" rel="noreferrer noopener" href="https://www.youtube.com/user/Zxvism/videos"><img className='w-6 mr-4' src="./youtube.webp"/></a>	
-                        <a target="_blank" rel="noreferrer noopener" href="https://www.instagram.com/joeythemonkk/"><img className='w-6 mr-4' src="./insta.webp"/></a>															
-                        <a target="_blank" rel="noreferrer noopener" href="https://www.tumblr.com/blog/joeythemonk"><img className='w-6 mr-4' src="./tumblr.webp"/></a>									
+                        <Link target="_blank" rel="noreferrer noopener" href="https://www.youtube.com/user/Zxvism/videos"><img className='w-6 mr-4' src="./youtube.webp"/></Link>	
+                        <Link target="_blank" rel="noreferrer noopener" href="https://www.instagram.com/joeythemonkk/"><img className='w-6 mr-4' src="./insta.webp"/></Link>															
+                        <Link target="_blank" rel="noreferrer noopener" href="https://www.tumblr.com/blog/joeythemonk"><img className='w-6 mr-4' src="./tumblr.webp"/></Link>									
                         <CopyToClipboard text={"joey.singhavong@gmail.com"} onCopy={() => alert('Email Copied!')}>
                             <img className='w-6 cursor-pointer' src="./email.webp"/>
                         </CopyToClipboard>								
