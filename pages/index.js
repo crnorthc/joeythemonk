@@ -24,7 +24,7 @@ export default function Home() {
 		for (let i = 1; i < 30; i++) {				
 			grid.push(
 				<button onClick={() => setPhoto(i)} className='hover:opacity-70'>
-					<img src={'./home/' + i + '.jpg'} />
+					<img src={'https://joeythemonk.s3.amazonaws.com/media/home/' + i + '.jpg'} />
 				</button>					
 			)
 
@@ -115,7 +115,7 @@ export default function Home() {
 	const get_photos = () => {
 		return (
 			<button onClick={() => setPhoto(null)} className='hover:opacity-70'>
-				<img src={'./home/' + photo + '.jpg'} />
+				<img src={'https://joeythemonk.s3.amazonaws.com/media/home/' + photo + '.jpg'} />
 			</button>	
 		)
 	}

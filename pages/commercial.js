@@ -13,23 +13,23 @@ export default function MusicVideos() {
     const music_video = (
 		<div className="flex flex-wrap justify-center sm:justify-around myFull:justify-between myFull:pl-10 sm:mr-4">			
 			<div className="px-2 py-2 sm:w-2/5 myFull:w-30">
-				<ReactPlayer light="./commercial/video5.jpg" url="./commercial/video5.mp4" previewTabIndex={1} height={"149px"} width={'265px'} controls={true} config={config}/>
+				<ReactPlayer light="https://joeythemonk.s3.amazonaws.com/media/commercial/video5.jpg" url="https://joeythemonk.s3.amazonaws.com/media/commercial/video5.mp4" previewTabIndex={1} height={"149px"} width={'265px'} controls={true} config={config}/>
 				<h1 className="poppins text-white w-video text-xs mt-2">SERVPRO Emma&apos;s Cafe Testimonial</h1>
 			</div>
 			<div className="px-2 py-2 sm:w-2/5 myFull:w-30">
-				<ReactPlayer light="./commercial/video4.jpg" url="./commercial/video4.mp4" height={"149px"} width={'265px'} controls={true} config={config}/>
+				<ReactPlayer light="https://joeythemonk.s3.amazonaws.com/media/commercial/video4.jpg" url="https://joeythemonk.s3.amazonaws.com/media/commercial/video4.mp4" height={"149px"} width={'265px'} controls={true} config={config}/>
 				<h1 className="poppins text-white w-video text-xs mt-2">SERVPRO Hazmat Antimicrobial Spraying</h1>
 			</div>
 			<div className="px-2 py-2 sm:w-2/5 myFull:w-30">
-				<ReactPlayer light="./commercial/video3.jpg" url="./commercial/video3.mp4" height={"149px"} width={'265px'} controls={true} config={config}/>
+				<ReactPlayer light="https://joeythemonk.s3.amazonaws.com/media/commercial/video3.jpg" url="https://joeythemonk.s3.amazonaws.com/media/commercial/video3.mp4" height={"149px"} width={'265px'} controls={true} config={config}/>
 				<h1 className="poppins text-white w-video text-xs mt-2">SERVPRO Mold Demolition</h1>
 			</div>
 			<div className="px-2 py-2 sm:w-2/5 myFull:w-30">
-				<ReactPlayer light="./commercial/video2.jpg" url="./commercial/video2.mp4" height={"149px"} width={'265px'} controls={true} config={config}/>
+				<ReactPlayer light="https://joeythemonk.s3.amazonaws.com/media/commercial/video2.jpg" url="https://joeythemonk.s3.amazonaws.com/media/commercial/video2.mp4" height={"149px"} width={'265px'} controls={true} config={config}/>
 				<h1 className="poppins text-white w-video text-xs mt-2">SERVPRO Barnhouse Dust Cleaning</h1>
 			</div>
 			<div className="px-2 py-2 sm:w-2/5 myFull:w-30">
-				<ReactPlayer light="./commercial/video1.jpg" url="./commercial/video1.mp4" height={"149px"} width={'265px'} controls={true} config={config}/>
+				<ReactPlayer light="https://joeythemonk.s3.amazonaws.com/media/commercial/video1.jpg" url="https://joeythemonk.s3.amazonaws.com/media/commercial/video1.mp4" height={"149px"} width={'265px'} controls={true} config={config}/>
 				<h1 className="poppins text-white w-video text-xs mt-2">SERVPRO x Operation Delta Dogs Commercial</h1>
 			</div>
             <div className='hidden sm:block w-3/4 sm:w-2/5 myFull:w-30'/>
@@ -44,7 +44,7 @@ export default function MusicVideos() {
 					<Sidebar />			
 					<div className="flex flex-col items-center md:items-start myFull:items-end w-full mt-8 sm:mt-16">
 						<div className="w-full flex flex-col items-center items-center mb-4 sm:mb-6">
-							<img src="./commercial/Servpro.webp" />                            
+							<img src="https://joeythemonk.s3.amazonaws.com/media/commercial/Servpro.webp" />                            
                             <div className="flex px-6 sm:pl-12 pt-6 flex-row w-full justify-start">
                                 <div className="flex flex-col sm:flex-row pb-1 border-b-2 border-rust">
                                     <h1 className="text-white font-bold pr-2 mr-2 sm:border-r-2 border-rust">SERVPRO OF NASHUA</h1>

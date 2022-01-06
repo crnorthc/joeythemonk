@@ -34,7 +34,7 @@ export default function About() {
 					<Sidebar />
                     <div className="w-full sm:mt-24">
                         <div className="px-6 sm:ml-4">
-                            <img className="w-full sm:hidden mb-6" src="./about/photo1.jpg"/>
+                            <img className="w-full sm:hidden mb-6" src="https://joeythemonk.s3.amazonaws.com/media/about/photo1.jpg"/>
                             <h1 className="text-rust hidden sm:block text-2xl mb-2 font-bold">Hello!</h1>
                             <div className="text-white text-lg font-light">
                                 <t className="hidden sm:inline">&nbsp; &nbsp; &nbsp; &nbsp;</t>My name is <t className="font-bold">Phommachak Singhavong</t>, but you can call me Joey. I also go by my director&apos;s name, 
@@ -45,14 +45,14 @@ export default function About() {
                         <h1 className="hidden sm:block text-rust text-2xl font-bold ml-8 mt-8">Biography</h1> 
                         <div className="flex flex-col sm:flex-row w-full items-center">                            
                             <div className="flex flex-col w-full px-4 sm:px-0 sm:w-1/3 mt-2 sm:ml-8">                            
-                                <img className="w-full hidden sm:block" src="./about/photo1.jpg"/>
+                                <img className="w-full hidden sm:block" src="https://joeythemonk.s3.amazonaws.com/media/about/photo1.jpg"/>
                                 <h1 className="sm:hidden text-rust text-3xl mt-6 mb-4">Biography</h1>
                                 <div className="flex flex-row">
                                     <div className="flex flex-col justify-between w-1/2 mt-2 mr-2">
-                                        <img className="w-full" src="./about/photo2.jpg"/>
-                                        <img className="w-full" src="./about/photo3.jpg"/>
+                                        <img className="w-full" src="https://joeythemonk.s3.amazonaws.com/media/about/photo2.jpg"/>
+                                        <img className="w-full" src="https://joeythemonk.s3.amazonaws.com/media/about/photo3.jpg"/>
                                     </div>
-                                    <img className="w-1/2 mt-2" src="./about/photo4.jpg"/>                                
+                                    <img className="w-1/2 mt-2" src="https://joeythemonk.s3.amazonaws.com/media/about/photo4.jpg"/>                                
                                 </div>
                             </div>   
                             <div className="w-full sm:w-2/3 px-4 sm:ml-8 mt-8 sm:mt-4 sm:mr-4">                                                               
