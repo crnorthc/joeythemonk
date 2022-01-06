@@ -12,6 +12,7 @@ phases:
       - npm run build
 artifacts:
   files:
-    - 'out/**/*'
-  discard-paths: yes
+    - '**/*'
+  base-directory: 'out'
+  discard-paths: no
 
