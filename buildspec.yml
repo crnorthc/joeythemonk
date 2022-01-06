@@ -3,8 +3,11 @@ version: 0.2
 phases:
   install:
     commands:
+      - echo "installing curl"
       - sudo yum -y install curl
-      - curl -sL https://rpm.nodesource.com/setup_16.x | sudo bash -
+      - echo "getting node"
+      - sudo curl --silent --location https://rpm.nodesource.com/setup_14.x | bash -
+      - echo "installing node"
       - sudo yum install -y nodejs
   pre_build:
     commands:
