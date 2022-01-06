@@ -124,7 +124,7 @@ export default function Home() {
 		<div className="flex flex-col items-center mb-12">
 			<img className="md:hidden mt-20 w-3/4 sm:px-20 mb-8" src="./JTM_logo.svg"/>
 			<div className="flex flex-row items-start justify-center bg-black">
-				<ReactPlayer url="./opening_video.mp4" height={"55%"} width={'75%'} playing={true} loop={true} muted={true} config={config}/>
+				<ReactPlayer url="https://joeythemonk.s3.amazonaws.com/media/home/opening_video.mp4" height={"55%"} width={'75%'} playing={true} loop={true} muted={true} config={config}/>
 			</div>
 			<div className="max-w-myFull">
 				<div className="flex flex-row justify-between pt-8">
