@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('//db.onlinewebfonts.com/c/33ca94f43a53fc634323a6fe191ffd64?family=TrendSansW00-Four');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind colors;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap');
+
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+.poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.trend {
+  font-family: 'TrendSansW00-Four', sans-serif;
+}
+
+.content-wrapper {
+  width: 1100px;
+}
+
+.the-pages {
+  position: relative;
+  z-index: 10;
+}
+
+.video-bg {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.photo_grid {
+  animation: fade-in .5s forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes fade-in {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
+.fade-out {
+  animation: fade-out .5s forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes fade-out {
+  0% {
+      opacity: 1;
+  }
+
+  100% {
+      opacity: 0;
+  }
+}
+
+.slide-out {
+  animation: slide-out .3s forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes slide-out {
+  0% {
+      transform: translateX(900px);
+  }
+
+  100% {
+      transform: translateX(0px);
+  }
+}
+
+
+.slide-in {
+  animation: slide-in .3s forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes slide-in {
+  0% {
+      transform: translateX(0px);
+  }
+
+  100% {
+      transform: translateX(900px);
+  }
+}

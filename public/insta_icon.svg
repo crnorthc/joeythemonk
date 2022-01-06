@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="12.755897mm"
+   height="12.755548mm"
+   viewBox="0 0 12.755896 12.755549"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   sodipodi:docname="insta_icon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.2271324"
+     inkscape:cx="-1.3470237"
+     inkscape:cy="121.00763"
+     inkscape:window-width="1440"
+     inkscape:window-height="847"
+     inkscape:window-x="2022"
+     inkscape:window-y="59"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     inkscape:snap-global="false" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-54.897938,-189.71822)">
+    <rect
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.18676;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+       id="rect3007"
+       width="11.569137"
+       height="11.568789"
+       x="55.491318"
+       y="190.3116"
+       ry="1.6117543" />
+    <circle
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.065;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path8061"
+       cx="61.275887"
+       cy="196.09599"
+       r="2.8561459" />
+    <ellipse
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.437766"
+       id="path8201"
+       cx="64.796516"
+       cy="192.3131"
+       rx="0.65147036"
+       ry="0.6514371" />
+  </g>
+</svg>
