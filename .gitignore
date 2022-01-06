@@ -39,3 +39,4 @@ yarn-error.log*
 /public/about
 /public/home
 /public/opening_video.mp4
+/out

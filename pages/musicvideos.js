@@ -1,7 +1,6 @@
 import Sidebar from "../components/sidebar"
 import Footer from "../components/footer"
 import ReactPlayer from "react-player/file"
-import Nav from '../components/nav'
 
 
 export default function MusicVideos() {
@@ -29,7 +28,7 @@ export default function MusicVideos() {
 			</div>
 			<div className="px-2 py-2">
 				<ReactPlayer light="./music_videos/video4.jpg" url="./music_videos/video4.mp4" height={"149px"} width={'265px'} controls={true} config={config}/>
-				<h1 className="poppins text-white w-video text-xs mt-2">Heart Eyed - Temple Song / I can't do this by myself</h1>
+				<h1 className="poppins text-white w-video text-xs mt-2">Heart Eyed - Temple Song / I can&apos;t do this by myself</h1>
 			</div>
 			<div className="px-2 py-2">
 				<ReactPlayer light="./music_videos/video3.jpg" url="./music_videos/video3.mp4" height={"149px"} width={'265px'} controls={true} config={config}/>

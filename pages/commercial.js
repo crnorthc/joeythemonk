@@ -14,7 +14,7 @@ export default function MusicVideos() {
 		<div className="flex flex-wrap justify-center sm:justify-around myFull:justify-between myFull:pl-10 sm:mr-4">			
 			<div className="px-2 py-2 sm:w-2/5 myFull:w-30">
 				<ReactPlayer light="./commercial/video5.jpg" url="./commercial/video5.mp4" previewTabIndex={1} height={"149px"} width={'265px'} controls={true} config={config}/>
-				<h1 className="poppins text-white w-video text-xs mt-2">SERVPRO Emma's Cafe Testimonial</h1>
+				<h1 className="poppins text-white w-video text-xs mt-2">SERVPRO Emma&apos;s Cafe Testimonial</h1>
 			</div>
 			<div className="px-2 py-2 sm:w-2/5 myFull:w-30">
 				<ReactPlayer light="./commercial/video4.jpg" url="./commercial/video4.mp4" height={"149px"} width={'265px'} controls={true} config={config}/>

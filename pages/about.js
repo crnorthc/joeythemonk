@@ -21,7 +21,7 @@ export default function About() {
             <div className="mb-4">
                 <t className="hidden sm:inline">&nbsp; &nbsp; &nbsp; &nbsp;</t> I draw my inspiration from 
                 passionate and ambitious individuals who are looking to push their brand or aesthetics to 
-                the next level and if that individual is you, then please don't hesitate to reach out.
+                the next level and if that individual is you, then please don&apos;t hesitate to reach out.
             </div> 
         </div>
     )
@@ -37,7 +37,7 @@ export default function About() {
                             <img className="w-full sm:hidden mb-6" src="./about/photo1.jpg"/>
                             <h1 className="text-rust hidden sm:block text-2xl mb-2 font-bold">Hello!</h1>
                             <div className="text-white text-lg font-light">
-                                <t className="hidden sm:inline">&nbsp; &nbsp; &nbsp; &nbsp;</t>My name is <t className="font-bold">Phommachak Singhavong</t>, but you can call me Joey. I also go by my director's name, 
+                                <t className="hidden sm:inline">&nbsp; &nbsp; &nbsp; &nbsp;</t>My name is <t className="font-bold">Phommachak Singhavong</t>, but you can call me Joey. I also go by my director&apos;s name, 
                                 Joey The Monk. I am a freelance filmmaker and a young entrepreneur based out of Nashua, 
                                 New Hampshire. You can often find me working around the Boston area.
                             </div>
