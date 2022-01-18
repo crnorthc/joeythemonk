@@ -103,16 +103,16 @@ export default function Home(props) {
 		}		
 		else {
 			if (forward) {
-				if (photo == 26) {
-					setPhoto(1)
+				if (photo == 28) {
+					setPhoto(0)
 				}
 				else {
 					setPhoto(photo + 1)
 				}
 			}
 			else {
-				if (photo == 1) {
-					setPhoto(26)
+				if (photo == 0) {
+					setPhoto(28)
 				}
 				else {
 					setPhoto(photo - 1)
