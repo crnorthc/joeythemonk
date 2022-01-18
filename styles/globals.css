@@ -10,7 +10,7 @@ body {
 }
 
 html {
-  background-image: url("../public/background.gif");
+  background-image: url("https://joeythemonk.s3.amazonaws.com/_next/static/media/background.25482e84.gif");
   background-size: cover;
   overflow-x: hidden;
 }
