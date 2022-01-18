@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('//db.onlinewebfonts.com/c/33ca94f43a53fc634323a6fe191ffd64?family=TrendSansW00-Four');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,12 +9,75 @@ body {
   font-family: 'Nunito', sans-serif;
 }
 
-.poppins {
-  font-family: 'Poppins', sans-serif;
+html {
+  background-image: url("../public/background.gif");
+  background-size: cover;
+  overflow-x: hidden;
 }
 
-.trend {
-  font-family: 'TrendSansW00-Four', sans-serif;
+.loading-screen {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: black;
+}
+
+.hide-loading {
+  animation: hide 1s forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes hide {
+  0% {
+      opacity: 100%;
+  }
+
+  100% {
+      opacity: 0;
+      display: hidden;
+  }
+}
+
+.dot {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: whitesmoke;
+}
+
+.dot1 {
+  animation: bounce 1s infinite;
+  animation-timing-function: linear;
+}
+
+.dot2 {
+  animation: bounce 1s infinite;
+  animation-timing-function: linear;
+  animation-delay: 300ms;
+}
+
+.dot3 {
+  animation: bounce 1s infinite;
+  animation-timing-function: linear;
+  animation-delay: 600ms;
+}
+
+@keyframes bounce {
+  0% {
+      transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(15px);
+  }
+
+  100% {
+      transform: translateY(0px);
+  }
+}
+
+.poppins {
+  font-family: 'Poppins', sans-serif;
 }
 
 .content-wrapper {

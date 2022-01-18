@@ -2,7 +2,6 @@ import Sidebar from "../components/sidebar"
 import Footer from "../components/footer"
 import ReactPlayer from "react-player/file"
 
-
 export default function MusicVideos() {
 	const config = {
 		file: {
