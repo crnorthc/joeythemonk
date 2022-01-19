@@ -16,7 +16,8 @@ module.exports = {
         '30': '30%'
       },
       maxWidth: {
-        myFull: "1100px"
+        myFull: "1100px",
+        swipe: '390px'
       },
       minWidth: {
         myFull: "1100px"
@@ -28,7 +29,8 @@ module.exports = {
         'myFull': "1100px",
         'stats': '978px',
         'stats2': '889px',
-        'mv': "833px"
+        'mv': "833px",
+        'phone': '400px'
       }
     },
   },

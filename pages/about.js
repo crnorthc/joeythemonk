@@ -1,9 +1,13 @@
 import Sidebar from "../components/sidebar"
 import Footer from "../components/footer"
-import ReactPlayer from "react-player/file"
+import { useEffect } from "react"
 
 
-export default function About() {
+export default function About(props) {
+
+    useEffect(() => {
+        props.setVisited(true)
+    }, [])
 
     const bio = (
         <div className="text-white poppins">

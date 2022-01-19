@@ -2,6 +2,7 @@ import Sidebar from "../components/sidebar"
 import Footer from "../components/footer"
 import ReactPlayer from "react-player/file"
 import { useState, useEffect } from "react"
+import Swiper from "swiper"
 
 const contentful = require('contentful')
 
@@ -11,6 +12,7 @@ export default function Home(props) {
 	const [photo, setPhoto] = useState(null)
 	const [action, setAction] = useState(null)
 	const [video, setVideo] = useState(null)
+	const [help, setHelp] = useState(false)
 
 	const client = contentful.createClient({
 		space: '2tm5nmp1y6j8',
@@ -22,6 +24,16 @@ export default function Home(props) {
 			setVideo(res.fields.video.fields.file.url)
 		})
 	}, [])
+
+	useEffect(() => {
+		if (props.loaded) {
+			setHelp(true)
+			const helper = setTimeout(() => {
+				setHelp(false)
+			}, 2900)
+			return () => clearTimeout(helper)
+		}		
+	}, [props.loaded])
 
 	const config = {
 		file: {
@@ -132,9 +144,36 @@ export default function Home(props) {
 		)
 	}
 
+	const swiper = new Swiper('.swiper', {
+		speed: 400,
+		spaceBetween: 100,
+		loop: true,
+		pagination: {
+			el: '.swiper-pagination',
+		  },
+	})
+
+	const get_slides = () => {
+		var grid = []
+		for (let i = 1; i < 30; i++) {	
+			grid.push(
+				<button className='swiper-slide'>
+					{props.photos[i - 1]}
+				</button>					
+			)
+		}
+		return (
+			<div className="swiper">
+				<div className="swiper-wrapper">
+					{grid}
+				</div>				
+				<div className="swiper-pagination"></div>
+			</div>			
+		)
+	}
 
 	const loading = (
-		<div className={"loading-screen flex flex-col justify-center items-center " + `${!props.loaded ? 'z-30' : 'hide-loading z-0'}`}>
+		<div className={"loading-screen flex flex-col justify-center items-center " + `${!props.loaded ? 'z-30' : 'hide-loading'}`}>
 			<div className="flex flex-row">
 				<div className="dot dot1" />
 				<div className="dot dot2 mx-2" />
@@ -145,25 +184,40 @@ export default function Home(props) {
 	)
 
 	return (
-		<div className="flex flex-col items-center mb-12">
-			{loading}
-			<img className="md:hidden mt-20 w-3/4 sm:px-20 mb-8" src="./JTM_logo.svg"/>
-			<div className="flex flex-row items-start justify-center bg-black">
-				{video == null ? 
-					<img src="https://joeythemonk.s3.amazonaws.com/media/home/5.webp" height={'55%'} width={'75%'} />
-				:
-					<ReactPlayer url={video} height={"55%"} width={'75%'} playing={true} loop={true} muted={true} config={config}/>
-				}				
-			</div>
+		<div className="flex flex-col items-center phone:mb-12">
+			{props.visited ? null : loading}
+			<img className="md:hidden mt-20 w-3/4 sm:px-20 mb-8" src="./JTM_logo.svg"/>			
+			{video == null ? 
+				<div className="flex flex-row items-start justify-center bg-black">
+					<img src="https://joeythemonk.s3.amazonaws.com/media/home/5.webp" />
+				</div>
+			:
+				<div>
+					<div className="hidden phone:flex flex-row items-start justify-center bg-black">
+						<ReactPlayer url={video} height={"55%"} width={'75%'} playing={true} loop={true} muted={true} config={config}/>
+					</div>
+					<div className="flex phone:hidden flex-row items-start justify-center bg-black">
+						<ReactPlayer url={video} height={"100%"} width={'100%'} playing={true} loop={true} muted={true} config={config}/>
+					</div>
+				</div>				
+			}				
 			<div className="max-w-myFull relative z-10">
 				<div className="flex flex-row justify-between pt-8">
 					<Sidebar />	
 					{!props.loaded ? null : 
-						<div className="flex flex-row items-center w-full md:w-3/4 mt-12 md:mt-24">
-							<button onClick={() => page_switch(true)} className='relative text-4xl text-white px-2 hover:opacity-50'>&lt;</button>
-							{props.loaded ? photo !== null ? get_photos() : get_photo_grid() : null}
-							<button onClick={() => page_switch()} className='relative text-4xl text-white px-2 hover:opacity-50'>&gt;</button>
-						</div>
+						<div>
+							<div className="hidden phone:flex flex-row items-center w-full md:w-3/4 mt-12 md:mt-24">
+								<button onClick={() => page_switch(true)} className='relative text-4xl text-white px-2 hover:opacity-50'>&lt;</button>
+								{props.loaded ? photo !== null ? get_photos() : get_photo_grid() : null}
+								<button onClick={() => page_switch()} className='relative text-4xl text-white px-2 hover:opacity-50'>&gt;</button>
+							</div>
+							<div className="w-screen overflow-x-hidden px-4 mt-8 flex flex-row justify-center">
+								<div className={help ? "swipe-indicator" : "hidden"} />
+								<div className="overflow-x-hidden relative z-10">
+									{get_slides()}
+								</div>
+							</div>														
+						</div>						
 					}								
 				</div>					
 			</div>

@@ -1,14 +1,19 @@
 import Sidebar from "../components/sidebar"
 import Footer from "../components/footer"
 import ReactPlayer from "react-player/file"
+import { useEffect } from "react"
 
 
-export default function MusicVideos() {
+export default function MusicVideos(props) {
 	const config = {
 		file: {
 			forceVideo: true
 		}
 	}
+
+	useEffect(() => {
+        props.setVisited(true)
+    }, [])
 
     const music_video = (
 		<div className="flex flex-wrap justify-center sm:justify-around myFull:justify-between myFull:pl-10 sm:mr-4">			

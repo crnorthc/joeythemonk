@@ -23,7 +23,7 @@ html {
 }
 
 .hide-loading {
-  animation: hide 1s forwards;
+  animation: hide 1.5s forwards;
   animation-timing-function: linear;
 }
 
@@ -35,6 +35,38 @@ html {
   100% {
       opacity: 0;
       display: hidden;
+      z-index: 0;
+  }
+}
+
+.swipe-indicator {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 40;
+  margin-top: 25%;
+  margin-right: 20%;
+
+  animation: da_swipe 1.5s infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes da_swipe {
+  0% {
+      transform: translateX(0px);
+      opacity: 100%;
+  }
+
+  80% {
+    transform: translateX(80px);
+    opacity: 40%;
+  }
+
+  100% {
+    transform: translateX(80px);
+    opacity: 40%;
   }
 }
 
@@ -157,5 +189,70 @@ html {
 
   100% {
       transform: translateX(900px);
+  }
+}
+
+/* For Mobile */
+@media screen and (max-width: 540px) {
+  .mv-1 {
+    animation: mv-in .5s forwards;
+    animation-timing-function: linear;
+  }
+  .mv-2 {
+    animation: mv-in .5s forwards;
+    animation-timing-function: linear;
+    animation-delay: .25s;
+  }
+  .mv-3 {
+    animation: mv-in .5s forwards;
+    animation-timing-function: linear;
+    animation-delay: .5s;
+  }
+  .mv-4 {
+    animation: mv-in .5s forwards;
+    animation-timing-function: linear;
+    animation-delay: .75s;
+  }
+  .mv-5 {
+    animation: mv-in .5s forwards;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+  }
+  .mv-6 {
+    animation: mv-in .5s forwards;
+    animation-timing-function: linear;
+    animation-delay: 1.25s;
+  }
+  .mv-7 {
+    animation: mv-in .5s forwards;
+    animation-timing-function: linear;
+    animation-delay: 1.5s;
+  }
+}
+
+@media screen and (min-width: 540px) {
+  .mv-1 {
+  }
+  .mv-2 {
+  }
+  .mv-3 {
+  }
+  .mv-4 {
+  }
+  .mv-5 {
+  }
+  .mv-6 {
+  }
+  .mv-7 {
+  }
+}
+
+@keyframes mv-in {
+  0% {
+      transform: translateX(600px);
+  }
+
+  100% {
+      transform: translateX(40px);
   }
 }

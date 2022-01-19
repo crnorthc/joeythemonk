@@ -1,9 +1,13 @@
 import { useState, useEffect } from "react"
 import "../styles/globals.css"
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 function MyApp({ Component, pageProps }) {
 	const [loaded, setLoaded] = useState(false)
 	const [photos, setPhotos] = useState(null)
+	const [visited, setVisited] = useState(false)
 
 	useEffect(() => {
 		var home_photos = []
@@ -27,7 +31,7 @@ function MyApp({ Component, pageProps }) {
 	return (
 		<div className="bg">
 			<div className="the-pages">
-				<Component {...pageProps} loaded={loaded} photos={photos} />
+				<Component {...pageProps} loaded={loaded} photos={photos} visited={visited} setVisited={setVisited} />
 			</div>			
 		</div>
 	)
