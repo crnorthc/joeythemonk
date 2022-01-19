@@ -205,13 +205,13 @@ export default function Home(props) {
 				<div className="flex flex-row justify-between pt-8">
 					<Sidebar />	
 					{!props.loaded ? null : 
-						<div>
+						<div className="w-full flex flex-row justify-center">
 							<div className="hidden phone:flex flex-row items-center w-full md:w-3/4 mt-12 md:mt-24">
 								<button onClick={() => page_switch(true)} className='relative text-4xl text-white px-2 hover:opacity-50'>&lt;</button>
 								{props.loaded ? photo !== null ? get_photos() : get_photo_grid() : null}
 								<button onClick={() => page_switch()} className='relative text-4xl text-white px-2 hover:opacity-50'>&gt;</button>
 							</div>
-							<div className="w-screen overflow-x-hidden px-4 mt-8 flex flex-row justify-center">
+							<div className="w-screen overflow-x-hidden px-4 mt-8 flex phone:hidden flex-row justify-center">
 								<div className={help ? "swipe-indicator" : "hidden"} />
 								<div className="overflow-x-hidden relative z-10">
 									{get_slides()}
