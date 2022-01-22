@@ -194,7 +194,7 @@ export default function Home(props) {
 			:
 				<div>
 					<div className="hidden phone:flex flex-row items-start justify-center bg-black">
-						<ReactPlayer url={video} height={"55%"} width={'75%'} playing={true} loop={true} muted={true} config={config}/>
+						<ReactPlayer url={video} height={"65%"} width={'90%'} playing={true} loop={true} muted={true} config={config}/>
 					</div>
 					<div className="flex phone:hidden flex-row items-start justify-center bg-black">
 						<ReactPlayer url={video} height={"100%"} width={'100%'} playing={true} loop={true} muted={true} config={config}/>
