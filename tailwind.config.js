@@ -6,9 +6,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        rust: 'rgb(165,74,59)',
+        rust: '#a54a3bff',
         blackHue: '#000000bb',
-        light: "#dde8efff"
+        light: "#dde8efff",
+        dark: "#0f1415ff"
       },
       width: {
         'video': '265px',
