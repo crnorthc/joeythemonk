@@ -14,17 +14,37 @@ export default function Home(props) {
 	const [video, setVideo] = useState(null)
 	const [help, setHelp] = useState(false)
 
+	// Contentful client
 	const client = contentful.createClient({
 		space: '2tm5nmp1y6j8',
 		accessToken: 'eGNhESDpGkcBiLbYB7YEnwGPktm5sZdoXCu-qCW6Yx8'
 	})
 
+	// Showcase video config
+	const config = {
+		file: {
+			forceVideo: true
+		}
+	}
+
+	// Mobile photo gallery
+	const swiper = new Swiper('.swiper', {
+		speed: 400,
+		spaceBetween: 100,
+		loop: true,
+		pagination: {
+			el: '.swiper-pagination',
+		  },
+	})
+
+	// Get showcase video
 	useEffect(() => {
 		client.getEntry('2M1BYoc3BsAl6TPDLON8n9').then((res) => {
 			setVideo(res.fields.video.fields.file.url)
 		})
 	}, [])
 
+	// Mobile showcase swipe animation
 	useEffect(() => {
 		if (props.loaded) {
 			setHelp(true)
@@ -35,12 +55,7 @@ export default function Home(props) {
 		}		
 	}, [props.loaded])
 
-	const config = {
-		file: {
-			forceVideo: true
-		}
-	}
-
+	// Desktop photo grid
 	const get_photo_grid = () => {
 		var _grids = []
 		var grid = []
@@ -74,6 +89,7 @@ export default function Home(props) {
 		return _grids
 	}
 
+	// Switch photo grid page
 	const page_switch = (forward) => {
 		if (photo == null) {
 			if (forward) {
@@ -136,6 +152,7 @@ export default function Home(props) {
 		}
 	}
 
+	// Single photo gallery desktop
 	const get_photos = () => {
 		return (
 			<button onClick={() => setPhoto(null)} className='hover:opacity-70'>
@@ -144,15 +161,7 @@ export default function Home(props) {
 		)
 	}
 
-	const swiper = new Swiper('.swiper', {
-		speed: 400,
-		spaceBetween: 100,
-		loop: true,
-		pagination: {
-			el: '.swiper-pagination',
-		  },
-	})
-
+	// Mobile photo gallery
 	const get_slides = () => {
 		var grid = []
 		for (let i = 1; i < 30; i++) {	
@@ -183,8 +192,10 @@ export default function Home(props) {
 		</div>
 	)
 
+	// Opacity when scroll down main video
+	// Ipad not working
 	return (
-		<div className="flex flex-col items-center phone:mb-12">
+		<div className="flex flex-col items-center mb-20 phone:mb-12">
 			{props.visited ? null : loading}
 			<img className="md:hidden mt-20 w-3/4 sm:px-20 mb-8" src="./JTM_logo.svg"/>			
 			{video == null ? 
@@ -207,9 +218,9 @@ export default function Home(props) {
 					{!props.loaded ? null : 
 						<div className="w-full md:w-3/4 flex flex-row justify-center">
 							<div className="hidden phone:flex flex-row items-center w-full mt-12 md:mt-24">
-								<button onClick={() => page_switch(true)} className='relative text-4xl text-white px-2 hover:opacity-50'>&lt;</button>
+								<button onClick={() => page_switch(true)} className='relative text-4xl text-white px-2 opacity-50 hover:opacity-100'><img src='./left_arrow.svg' /></button>
 								{props.loaded ? photo !== null ? get_photos() : get_photo_grid() : null}
-								<button onClick={() => page_switch()} className='relative text-4xl text-white px-2 hover:opacity-50'>&gt;</button>
+								<button onClick={() => page_switch()} className='relative text-4xl text-white px-2 opacity-50 hover:opacity-100'><img src='./right_arrow.svg' /></button>
 							</div>
 							<div className="w-screen overflow-x-hidden px-4 mt-8 flex phone:hidden flex-row justify-center">
 								<div className={help ? "swipe-indicator" : "hidden"} />
